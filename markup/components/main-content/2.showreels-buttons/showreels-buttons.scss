@@ -1,0 +1,32 @@
+.showreels-buttons {
+    $main-content--show: #{'.main-content--show'};
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease;
+    transition-delay: 3.5s;
+    @include media((
+        width: (
+            all: 420 / 14.4 + vw,
+            mob: 252 / 3.75 + vw
+        ),
+        height: (
+            all: 200 / 14.4 + vw,
+            mob: 120 / 3.75 + vw
+        )
+    ));
+    @at-root #{$main-content--show} & {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    &__item_1 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

@@ -1,0 +1,15 @@
+mixin circle-button({text="lorem text", icon='eye', circle='wave', initialState=false, disableHover=false, alwaysShowCircle=false, } = {})
+    .circle-button&attributes(attributes)(class=((initialState ? `circle-button--${initialState} ` : '') + (disableHover ? ' circle-button--disable-hover ' : '') + (alwaysShowCircle? ' circle-button--always-show-circle ' : '')))
+        if circle == 'static'
+            .circle-button__circle-static
+        if circle == 'wave'
+            svg(viewBox="0 0 150 150").circle-button__circle-wave
+                path
+                path
+        if text != false
+            .circle-button__text
+                p
+                    each val in [...text]
+                        span= val
+        .circle-button__icon
+            img(src=`static/img/general/${icon}.svg`)

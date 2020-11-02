@@ -1,0 +1,54 @@
+section.projects.main__projects
+    .projects__filter
+        button.projects__filter-button All Projects
+    .projects__inner
+    button.projects__show-more Show more
+.projects__filter-modal-choise
+    ul
+        li
+            a(href="#")
+                span All Projects
+        li
+            a(href="#")
+                span Creative
+        li
+            a(href="#")
+                span Websites
+        li
+            a(href="#")
+                span Video
+        li
+            a(href="#").is-checked
+                span VR
+        li
+            a(href="#")
+                span Branding
+        li
+            a(href="#")
+                span Social
+        li
+            a(href="#")
+                span Media
+        li
+            a(href="#")
+                span Apps
+        li
+            a(href="#")
+                span Interactive
+        li
+            a(href="#")
+                span installations
+        li
+            a(href="#")
+                span Posm
+        li
+            a(href="#")
+                span Print
+    +circle-button({
+        text: false,
+        icon: 'x',
+        circle: 'wave',
+        alwaysShowCircle: true
+    }).projects__filter-modal-choise-close.projects__hover-x-rotate
+
+

@@ -1,0 +1,21 @@
+doctype html
+html(lang="ru")
+
+    include ../components/head/head.pug
+    include ../components/main-content/main-content
+    include ../components/header/header.pug
+    include ../components/pupup-main-menu/pupup-main-menu
+    include ../components/circle-button/circle-button.pug
+    include ../components/pupup-welcome-animation/pupup-welcome-animation.pug
+
+    head
+        +head()
+    body
+        |%=symbols=%
+        +header()
+        +pupup-main-menu()
+        +main-content()
+        +pupup-welcome-animation()
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        //script(src='%=static=%js/main%=hash=%%=min=%.js')
+        script(src='static/js/main%=hash=%%=min=%.js')

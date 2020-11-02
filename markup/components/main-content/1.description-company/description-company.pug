@@ -1,0 +1,20 @@
+section.description-company.main__description
+    - let text = 'Deluxe Interactive is a digital ';
+    - let text2 = 'creative agency. We know the shortest way from creative thought to it’s realization.';
+    div
+        p
+            each val in [...text]
+                span= val
+        p
+            each val in [...text2]
+                span= val
+    - let text3 = 'We make ';
+    - let text4 = ' real!';
+    p
+        each val in [...text3]
+            span= val
+        span
+            i.blink-words
+                b
+        each val in [...text4]
+            span= val
