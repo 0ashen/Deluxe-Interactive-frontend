@@ -8,3 +8,6 @@
 ##### Entry point js: `markup/components/main.js`
 ##### Scss vars _`markup/static/scss/vars.scss`_
 
+#### Docker 
+`docker build -t deluxe-tars-cli .`
+`docker run -itp 3004:3004 -v /absolute_page_project:/project deluxe-tars-cli sh -c "cd /project && npm i && tars dev"`
